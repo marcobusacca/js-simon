@@ -181,9 +181,3 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
                 - Inserisci dentro containerMessage la Variabile messageContent: containerMessage.innerHTML = messageContent;
         }, 31000)
-
-    
-   
-
-
-    
