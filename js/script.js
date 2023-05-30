@@ -7,7 +7,7 @@ function createRandomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// FUNZIONE CHE CONTROLLA OGNI NUMERO RANDOM GENERATO
+// FUNZIONE CHE CONTROLLA OGNI NUMERO CASUALE GENERATO
 function checkRandomNumber(arrayNumber){
 
     // VARIABILE DI CONTROLLO
@@ -28,4 +28,15 @@ function checkRandomNumber(arrayNumber){
     }
 
     return randomNumber;
+}
+
+// FUNZIONE CHE GENERA TUTTI I NUMERI CASUALI E LI INSERISCE NELL'ARRAY_NUMBER
+function generateArrayNumber(arrayNumber, maxNumber){
+
+    for (let i = 1; i <= maxNumber; i++){
+
+        let randomNumber = checkRandomNumber(arrayNumber);
+    
+        arrayNumber.push(randomNumber);
+    }
 }
