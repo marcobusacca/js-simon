@@ -73,4 +73,7 @@ playButton.addEventListener('clik', function(){
     // RECUPERO DALL'HTML LA GRIGLIA DOVE INSERIRE I 5 NUMERI CASUALI
     const gridNumber = document.getElementByid('gridNumber');
 
+    // RECUPERO DALL'HTML IL CONTAINER DOVE INSERIRE IL COUNTDOWN
+    const containerCountdown = document.getElementByid('countdown');
+
 })
