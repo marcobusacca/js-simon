@@ -125,4 +125,8 @@ playButton.addEventListener('click', function(){
             containerCountdown.innerHTML = `Tempo rimasto: ${timeCountdown} secondi`;
         }  
     }, 1000)
+
+
+    // VARIABILE CHE CONTEGGIA IL PUNTEGGIO DELL'UTENTE
+    let userPoint = 0;
 })
