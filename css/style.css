@@ -43,7 +43,7 @@
 /* FINE NUMBER ROW */
 
 /* COUNTDOWN ROW */
-.countdown-row *{
+.countdown-row{
     font-weight: 700;
     font-size: 50px;
 }

@@ -101,7 +101,7 @@ playButton.addEventListener('click', function(){
     let timeCountdown = 30;
 
     // INSERISCO TIME_COUNTDOWN NEL SUO CONTAINER HTML
-    containerCountdown.innerHTML = timeCountdown;
+    containerCountdown.innerHTML = `Tempo rimasto: ${timeCountdown} secondi`;
 
     // RICHIAMO LA FUNZIONE PER GENERARE I NUMERI CASUALI, CONTROLLARLI ED INSERIRLI NELLA PAGINA HTML
     fillArrayNumber(arrayNumber, maxNumber, gridNumber);
