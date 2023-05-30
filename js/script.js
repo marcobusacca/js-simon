@@ -68,16 +68,16 @@ function fillArrayNumber(arrayNumber, maxNumber, gridNumber){
 const playButton = document.getElementById('play');
 
 // L'UTENTE CLICCA SUL BOTTONE "PLAY"
-playButton.addEventListener('clik', function(){
+playButton.addEventListener('click', function(){
 
     // RECUPERO DALL'HTML LA GRIGLIA DOVE INSERIRE I 5 NUMERI CASUALI
-    const gridNumber = document.getElementByid('gridNumber');
+    const gridNumber = document.getElementById('grid');
 
     // RECUPERO DALL'HTML IL CONTAINER DOVE INSERIRE IL COUNTDOWN
-    const containerCountdown = document.getElementByid('countdown');
+    const containerCountdown = document.getElementById('countdown');
 
     // RECUPERO DALL'HTML IL CONTAINER DOVE INSERIRE IL MESSAGGIO FINALE
-    const containerMessage = document.getElementByid('message');
+    const containerMessage = document.getElementById('message');
 
 
     // RESETTO IL CONTENUTO DI GRID_NUMBER
