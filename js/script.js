@@ -76,4 +76,7 @@ playButton.addEventListener('clik', function(){
     // RECUPERO DALL'HTML IL CONTAINER DOVE INSERIRE IL COUNTDOWN
     const containerCountdown = document.getElementByid('countdown');
 
+    // RECUPERO DALL'HTML IL CONTAINER DOVE INSERIRE IL MESSAGGIO FINALE
+    const containerMessage = document.getElementByid('message');
+
 })
