@@ -79,6 +79,7 @@ playButton.addEventListener('clik', function(){
     // RECUPERO DALL'HTML IL CONTAINER DOVE INSERIRE IL MESSAGGIO FINALE
     const containerMessage = document.getElementByid('message');
 
+
     // RESETTO IL CONTENUTO DI GRID_NUMBER
     gridNumber.innerHTML = '';
 
@@ -88,9 +89,17 @@ playButton.addEventListener('clik', function(){
     // RESETTO IL CONTENUTO DI CONTAINER_MESSAGE
     containerMessage.innerHTML = '';
 
+
     // ARRAY_NUMBER CONTENENTE I NUMERI CASUALI
     let arrayNumber = [];
 
     // VARIABILE NUMERO MASSIMO DI NUMERI CASUALI DA GENERARE
     const maxNumber = 5;
+
+
+    // VARIABILE CONTENENTE I SECONDI DEL COUNTDOWN
+    let timeCountdown = 30;
+
+    // INSERISCO TIME_COUNTDOWN NEL SUO CONTAINER HTML
+    containerCountdown.innerHTML = timeCountdown;
 })
