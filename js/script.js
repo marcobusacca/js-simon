@@ -98,7 +98,7 @@ playButton.addEventListener('click', function(){
 
 
     // VARIABILE CONTENENTE I SECONDI DEL COUNTDOWN
-    let timeCountdown = 30;
+    let timeCountdown = 3;
 
     // INSERISCO TIME_COUNTDOWN NEL SUO CONTAINER HTML
     containerCountdown.innerHTML = `Tempo rimasto: ${timeCountdown} secondi`;
@@ -132,4 +132,15 @@ playButton.addEventListener('click', function(){
 
     // VARIABILE CHE SALVA I NUMERI INDOVINATI DALL'UTENTE
     let userRightNumber = '';
+
+    
+    // FUNZIONE CHE DOPO 30 SECONDI FA SCOMPARIRE I NUMERI CASUALI
+    setTimeout(function(){
+
+        // RESETTO LA GRIGLIA HTML CHE CONTIENE I NUMERI CASUALI
+        gridNumber.innerHTML = '';
+
+    }, 3000)
 })
+
+        

@@ -122,11 +122,17 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
     - Dichiarare una Variabile che Salva i Numeri Indovinati dall'utente: let userRightNumber = '';
 
 
-    - Creare una Funzione che, dopo 30 secondi, fa scomparire i Numeri Casuali e chiede all'utente di inserirli tramite Prompt:
+    - Creare una Funzione che, dopo 30 secondi, fa scomparire i Numeri Casuali:
 
-        - const userGame = setTimeOut(function(){
+        - setTimeout(function(){
 
             - Resettare gridNumber: gridNumber.innerHTML = '';
+
+        }, 30000)
+
+    - Creare una Funzione che, dopo 30,1 secondi, chiede all'utente di inserire i numeri casuali tramite Prompt:
+
+        - setTimeout(function(){
 
             - Creare un CICLO FOR che va da 1 al numero Massimo di Numeri Random (maxNumber):
 
