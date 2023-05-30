@@ -128,6 +128,8 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
             - Resettare gridNumber: gridNumber.innerHTML = '';
 
+            - Resettare containerCountdown: containerCountdown.innerHTML = '';
+
         }, 30000)
 
     - Creare una Funzione che, dopo 30,1 secondi, chiede all'utente di inserire i numeri casuali tramite Prompt:

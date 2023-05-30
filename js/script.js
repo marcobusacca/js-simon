@@ -140,6 +140,9 @@ playButton.addEventListener('click', function(){
         // RESETTO LA GRIGLIA HTML CHE CONTIENE I NUMERI CASUALI
         gridNumber.innerHTML = '';
 
+        // RESETTO IL CONTENUTO DI CONTAINER_COUNTDOWN
+        containerCountdown.innerHTML = '';
+
     }, 30000)
 })
 
