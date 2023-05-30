@@ -66,3 +66,8 @@ function fillArrayNumber(arrayNumber, maxNumber, gridNumber){
 
 // RECUPERO DALL'HTML IL BOTTONE "PLAY"
 const playButton = document.getElementById('play');
+
+// L'UTENTE CLICCA SUL BOTTONE "PLAY"
+playButton.addEventListener('clik', function(){
+
+})
