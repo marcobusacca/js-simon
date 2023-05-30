@@ -54,9 +54,10 @@
     margin-top: 50px;
 }
 
-.message-row *{
+.message-row{
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
+    line-height: 1.5;
     text-align: center;
 }
 /* FINE MESSAGE ROW */

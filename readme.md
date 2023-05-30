@@ -79,7 +79,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
     - Recuperare dall'HTML il Container dove inserire il Countdown ed inserirlo in una Constante: const containerCountdown = document.getElementByid('countdown');
 
-    - Recuperare dall'HTML il Container dove inserire il Punteggio dell'utente: const containerMessage =  document.getElementByid('message');
+    - Recuperare dall'HTML il Container dove inserire il Messaggio Finale per l'utente: const containerMessage =  document.getElementByid('message');
 
 
     - Resettare gridNumber: gridNumber.innerHTML = '';
@@ -117,11 +117,6 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
     }, 1000)
 
 
-    - Dichiarare una Variabile che Conteggia il Punteggio dell'utente: let userPoint = 0;
-
-    - Dichiarare una Variabile che Salva i Numeri Indovinati dall'utente: let userRightNumber = '';
-
-
     - Creare una Funzione che, dopo 30 secondi, fa scomparire i Numeri Casuali:
 
         - setTimeout(function(){
@@ -132,9 +127,15 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
         }, 30000)
 
+
     - Creare una Funzione che, dopo 30,1 secondi, chiede all'utente di inserire i numeri casuali tramite Prompt:
 
         - setTimeout(function(){
+
+            - Dichiarare una Variabile che Conteggia il Punteggio dell'utente: let userPoint = 0;
+
+            - Dichiarare una Variabile che Salva i Numeri Indovinati dall'utente: let userRightNumber = '';
+
 
             - Creare un CICLO FOR che va da 1 al numero Massimo di Numeri Random (maxNumber):
 
@@ -166,7 +167,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
                     - ALTRIMENTI:
 
-                        - Inserisci dentro messageContent: messageContent += `${arrayNumber[i] - }`
+                        - Inserisci dentro messageContent: messageContent += `${arrayNumber[i]} - `
 
                 - Inserisci uno spazio dentro messageContent: messageContent += `<br>`;
 
@@ -177,7 +178,9 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
                 - Inserisci uno spazio dentro messageContent: messageContent += `<br>`;
 
                 - Inserisci dentro messageContent: messageContent += `Il tuo punteggio è: ${userPoint} `;
-        }, 30000)
+
+                - Inserisci dentro containerMessage la Variabile messageContent: containerMessage.innerHTML = messageContent;
+        }, 31000)
 
     
    

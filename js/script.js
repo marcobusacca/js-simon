@@ -107,6 +107,8 @@ playButton.addEventListener('click', function(){
     // RICHIAMO LA FUNZIONE PER GENERARE I NUMERI CASUALI, CONTROLLARLI ED INSERIRLI NELLA PAGINA HTML
     fillArrayNumber(arrayNumber, maxNumber, gridNumber);
 
+    // console.log(arrayNumber) // VISIONARE IN CONSOLE L'ARRAY CON I NUMERI CASUALI
+
 
     // FUNZIONE PER ESEGUIRE IL COUNTDOWN
     const countdown = setInterval(function(){
@@ -126,13 +128,6 @@ playButton.addEventListener('click', function(){
         }  
     }, 1000)
 
-
-    // VARIABILE CHE CONTEGGIA IL PUNTEGGIO DELL'UTENTE
-    let userPoint = 0;
-
-    // VARIABILE CHE SALVA I NUMERI INDOVINATI DALL'UTENTE
-    let userRightNumber = '';
-
     
     // FUNZIONE CHE DOPO 30 SECONDI FA SCOMPARIRE I NUMERI CASUALI
     setTimeout(function(){
@@ -144,6 +139,82 @@ playButton.addEventListener('click', function(){
         containerCountdown.innerHTML = '';
 
     }, 30000)
-})
 
-        
+
+    // FUNZIONE CHE, DOPO 30,1 SECONDI, CHIEDE ALL'UTENTE DI INSERIRE I NUMERI CASUALI TRAMITE PROMPT, E STAMPA IL MESSAGGIO FINALE
+    setTimeout(function(){
+
+        // VARIABILE CHE CONTEGGIA IL PUNTEGGIO DELL'UTENTE
+        let userPoint = 0;
+
+        // VARIABILE CHE SALVA I NUMERI INDOVINATI DALL'UTENTE
+        let userRightNumber = '';
+
+        // CICLO FOR CHE SCORRE DAL PRIMO ALL'ULTIMO NUMERO CASUALE GENERATO
+        for (let i = 1; i <= maxNumber; i++){
+
+            // L'UTENTE INSERISCE IL NUMERO TRAMITE PROMPT
+            const userNumber = parseInt(prompt(`Inserire il ${i}° numero:`));
+
+            if (userNumber === arrayNumber[i-1]){ // IL NUMERO INSERITO DALL'UTENTE è GIUSTO
+
+                if (i === maxNumber){ // IL CICLO è ARRIVATO ALL'ULTIMO NUMERO
+
+                    // INSERISCO IL NUMERO DELL'UTENTE IN USER_RIGHT_NUMBER
+                    userRightNumber += `${userNumber}`;
+
+                } else{ // IL CICLO NON è ARRIVATO ALL'ULTIMO NUMERO
+
+                    // INSERISCO IL NUMERO DELL'UTENTE IN USER_RIGHT_NUMBER
+                    userRightNumber += `${userNumber} - `;             
+                }
+
+                // INCREMENTO IL PUNTEGGIO DELL'UTENTE
+                userPoint++;
+
+                // console.log(userPoint)  // VISIONARE IN CONSOLE IL PUNTEGGIO DELL'UTENTE
+            }
+        }
+
+        // STAMPO IL MESSAGGIO FINALE NEL CONTAINER_MESSAGE:
+
+            // DICHIARO UNA VARIABILE DOVE SALVARE IL MESSAGGIO
+            let messageContent = '';
+
+            // INSERIMENTO STRINGA DENTRO MESSAGE_CONTENT
+            messageContent += `I numeri casuali erano: `;
+
+            // CICLO FOR CHE SCORRE TUTTI GLI INDICI DELL'ARRAY_NUMBER
+            for (let i = 0; i < arrayNumber.length; i++){
+                
+                if (i === arrayNumber.length - 1){ // SIAMO ARRIVATI ALL'ULTIMO INDICE
+
+                    // INSERISCO DENTRO MESSAGE_CONTENT L'ULTIMO ELEMENTO DELL'ARRAY_NUMBER
+                    messageContent += `${arrayNumber[i]}`;
+
+                } else{ // NON SIAMO ARRIVATI ALL'ULTIMO INDICE
+
+                    // INSERISCO DENTRO MESSAGE_CONTENT OGNI ELEMENTO DELL'ARRAY_NUMBER
+                    messageContent +=  `${arrayNumber[i]} - `;
+                }
+            }
+
+            // INSERIMENTO SPAZIO TRA IL TESTO HTML
+            messageContent += `<br>`;
+
+            // INSERIMENTO STRINGA DENTRO MESSAGE_CONTENT
+            messageContent += `I numeri che hai indovinato sono: `;
+
+            // INSERIMENTO NUMERI INDOVINATI DALL'UTENTE DENTRO MESSAGE_CONTENT
+            messageContent += userRightNumber;
+            
+            // INSERIMENTO SPAZIO TRA IL TESTO HTML
+            messageContent += `<br>`;
+
+            // INSERIMENTO PUNTEGGIO UTENTE DENTRO MESSAGE_CONTENT
+            messageContent += `Il tuo punteggio è: ${userPoint} `;
+
+            // INSERIMENTO NEL CONTAINER MESSAGE HTML IL MESSAGE_CONTENT
+            containerMessage.innerHTML = messageContent;
+    }, 31000)
+})      
