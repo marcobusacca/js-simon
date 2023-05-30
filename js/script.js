@@ -103,6 +103,26 @@ playButton.addEventListener('click', function(){
     // INSERISCO TIME_COUNTDOWN NEL SUO CONTAINER HTML
     containerCountdown.innerHTML = `Tempo rimasto: ${timeCountdown} secondi`;
 
+
     // RICHIAMO LA FUNZIONE PER GENERARE I NUMERI CASUALI, CONTROLLARLI ED INSERIRLI NELLA PAGINA HTML
     fillArrayNumber(arrayNumber, maxNumber, gridNumber);
+
+
+    // FUNZIONE PER ESEGUIRE IL COUNTDOWN
+    const countdown = setInterval(function(){
+
+        if (timeCountdown === 0){ // IL COUNTDOWN è ARRIVATO A ZERO
+
+            // STOPPO L'ESECUZIONE DEL COUNTDOWN
+            clearInterval(countdown);
+
+        } else{
+
+            // DECREMENTO LA VARIABILE TIME_COUNTDOWN
+            timeCountdown--;
+
+            // INSERISCO TIME_COUNTDOWN NEL SUO CONTAINER HTML
+            containerCountdown.innerHTML = `Tempo rimasto: ${timeCountdown} secondi`;
+        }  
+    }, 1000)
 })
