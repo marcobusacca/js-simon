@@ -33,7 +33,7 @@ function checkRandomNumber(arrayNumber){
 // FUNZIONE CHE GENERA TUTTI I NUMERI CASUALI E LI INSERISCE NELL'ARRAY_NUMBER
 function generateArrayNumber(arrayNumber, maxNumber){
 
-    for (let i=1; i <= maxNumber; i++){
+    for (let i = 1; i <= maxNumber; i++){
 
         const randomNumber = checkRandomNumber(arrayNumber);
     
@@ -48,7 +48,7 @@ function fillArrayNumber(arrayNumber, maxNumber, gridNumber){
     generateArrayNumber(arrayNumber, maxNumber);
 
     // INSERISCO GLI ELEMENTI "DIV", CHE CONTENGONO IL NUMERO CASUALE, NELLA GRIGLIA HTML
-    for (let i=1; i <= maxNumber; i++){
+    for (let i = 1; i <= maxNumber; i++){
 
         // CREO L'ELEMENTO HTML "DIV" E LO INSERISCO DENTRO LA CONSTANTE CONTAINER_NUMBER
         const containerNumber = document.createElement('div');
