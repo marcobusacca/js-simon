@@ -70,4 +70,7 @@ const playButton = document.getElementById('play');
 // L'UTENTE CLICCA SUL BOTTONE "PLAY"
 playButton.addEventListener('clik', function(){
 
+    // RECUPERO DALL'HTML LA GRIGLIA DOVE INSERIRE I 5 NUMERI CASUALI
+    const gridNumber = document.getElementByid('gridNumber');
+
 })
