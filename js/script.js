@@ -129,4 +129,7 @@ playButton.addEventListener('click', function(){
 
     // VARIABILE CHE CONTEGGIA IL PUNTEGGIO DELL'UTENTE
     let userPoint = 0;
+
+    // VARIABILE CHE SALVA I NUMERI INDOVINATI DALL'UTENTE
+    let userRightNumber = '';
 })
