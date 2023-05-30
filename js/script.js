@@ -79,4 +79,12 @@ playButton.addEventListener('clik', function(){
     // RECUPERO DALL'HTML IL CONTAINER DOVE INSERIRE IL MESSAGGIO FINALE
     const containerMessage = document.getElementByid('message');
 
+    // RESETTO IL CONTENUTO DI GRID_NUMBER
+    gridNumber.innerHTML = '';
+
+    // RESETTO IL CONTENUTO DI CONTAINER_COUNTDOWN
+    containerCountdown.innerHTML = '';
+
+    // RESETTO IL CONTENUTO DI CONTAINER_MESSAGE
+    containerMessage.innerHTML = '';
 })
