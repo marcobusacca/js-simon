@@ -63,3 +63,6 @@ function fillArrayNumber(arrayNumber, maxNumber, gridNumber){
         gridNumber.append(containerNumber);
     }
 }
+
+// RECUPERO DALL'HTML IL BOTTONE "PLAY"
+const playButton = document.getElementById('play');
