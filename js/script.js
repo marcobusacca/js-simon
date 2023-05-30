@@ -217,4 +217,4 @@ playButton.addEventListener('click', function(){
             // INSERIMENTO NEL CONTAINER MESSAGE HTML IL MESSAGE_CONTENT
             containerMessage.innerHTML = messageContent;
     }, 31000)
-})      
+})
