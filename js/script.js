@@ -87,4 +87,10 @@ playButton.addEventListener('clik', function(){
 
     // RESETTO IL CONTENUTO DI CONTAINER_MESSAGE
     containerMessage.innerHTML = '';
+
+    // ARRAY_NUMBER CONTENENTE I NUMERI CASUALI
+    let arrayNumber = [];
+
+    // VARIABILE NUMERO MASSIMO DI NUMERI CASUALI DA GENERARE
+    const maxNumber = 5;
 })
