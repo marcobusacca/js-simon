@@ -117,7 +117,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
     }, 1000)
 
 
-    - Creare una Funzione che, dopo 30 secondi, fa scomparire i Numeri Casuali:
+    - Creare una Funzione che, dopo 30,1 secondi, fa scomparire i Numeri Casuali:
 
         - setTimeout(function(){
 
@@ -128,7 +128,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
         }, 30000)
 
 
-    - Creare una Funzione che, dopo 30,1 secondi, chiede all'utente di inserire i numeri casuali tramite Prompt:
+    - Creare una Funzione che, dopo 30,2 secondi, chiede all'utente di inserire i numeri casuali tramite Prompt:
 
         - setTimeout(function(){
 

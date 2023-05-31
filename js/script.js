@@ -129,7 +129,7 @@ playButton.addEventListener('click', function(){
     }, 1000)
 
     
-    // FUNZIONE CHE DOPO 30 SECONDI FA SCOMPARIRE I NUMERI CASUALI
+    // FUNZIONE CHE DOPO 30,1 SECONDI FA SCOMPARIRE I NUMERI CASUALI
     setTimeout(function(){
 
         // RESETTO LA GRIGLIA HTML CHE CONTIENE I NUMERI CASUALI
@@ -138,10 +138,10 @@ playButton.addEventListener('click', function(){
         // RESETTO IL CONTENUTO DI CONTAINER_COUNTDOWN
         containerCountdown.innerHTML = '';
 
-    }, 30000)
+    }, 31000)
 
 
-    // FUNZIONE CHE, DOPO 30,1 SECONDI, CHIEDE ALL'UTENTE DI INSERIRE I NUMERI CASUALI TRAMITE PROMPT, E STAMPA IL MESSAGGIO FINALE
+    // FUNZIONE CHE, DOPO 30,2 SECONDI, CHIEDE ALL'UTENTE DI INSERIRE I NUMERI CASUALI TRAMITE PROMPT, E STAMPA IL MESSAGGIO FINALE
     setTimeout(function(){
 
         // VARIABILE CHE CONTEGGIA IL PUNTEGGIO DELL'UTENTE
@@ -216,5 +216,5 @@ playButton.addEventListener('click', function(){
 
             // INSERIMENTO NEL CONTAINER MESSAGE HTML IL MESSAGE_CONTENT
             containerMessage.innerHTML = messageContent;
-    }, 31000)
+    }, 32000)
 })
